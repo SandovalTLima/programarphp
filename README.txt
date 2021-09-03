@@ -5,3 +5,8 @@ Módulo 1
     Aula 9 Arrays
     Aula 10 Operador array spread
     Aula 11 Exercício prático variáveis
+Módulo 2
+	Aula 1 Condicional if
+	Aula 2 Operador ternário
+	Aula 3 Condicional NULL CAO
+	

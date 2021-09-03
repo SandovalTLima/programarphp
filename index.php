@@ -57,15 +57,64 @@ echo $ingredientes[0];
 Neste exemplo o dado inicial (índice 0) é impresso na tela.
 			<h3>Operador array spread</h3>
 O operador array spread é usado para adicionar um vetor dentro de outro, veja o exemplo a seguir:
-	$ingredientes = ['açucar', 'farinha', 'ovos', 'fermento', 'leite']; 
-	$ingredientes2 = [...$ingredientes, 'chocolate'];
+
+$ingredientes = ['açucar', 'farinha', 'ovos', 'fermento', 'leite']; 
+$ingredientes2 = [...$ingredientes, 'chocolate'];
+
 Para mostrar todos os dados do array usa-se o comando print_u(nomedoarray), veja o exemplo a seguir:
 
 
             	</code>
             </pre>
+        <div id="condicionais">
+        	<h3>Condicional if</h3>
+
+        	<pre>
+        		<code>
+Ao usar o condicional if(se) o bloco de código dentro dele só é executado se a condição for satisfeita, como veremos no exemplo a seguir:
+	
+$idade = 18;
+if($idade >= 18){
+	echo "Maoir de idade";
+}
+
+Neste caso a condição foi satisfeita e o texto ("Maoir de idade") foi impresso.
+Também é possível usar o else (senão), o else é executado quando a condição if não é satisfeita, veja no exemplo a seguir:
+	
+$idade = 17;
+	if($idade >= 18){
+		echo "Maoir de idade";
+}else{
+	echo "Menor de idade";
+}
+
+No exemplo acima  a condição if não foi satisfeita então o else é executado, o texto (Menor de idade) foi impresso.
+
+<h3>Operador ternário</h3>
+O operador ternário é uma alternativa para substituir o if…else em algumas situações por ser um comando em uma única linha. 
+O operador ternário pode ser usado da seguinte forma: (condição) ? resultado1 : resultado, os valores dos resultados 1 e 2 podem sem impressos (como no exemplo a seguir) ou guardados em uma váriável. Veja no exemplo a seguir:
+
+$idade = 17;
+echo ($idade >= 18) ? "Maior de idade" : "Menor de idade";
+
+No caso acima o texto (Menor de idade) foi impresso pois a condição não foi satisfeita.
+
+<h3>Condicional NULL CAO</h3> 
+O Condicional NULL CAO (só funciona a patir do PHP 7.4)  é usado para o valor de uma variável ser adicionada a uma condição caso ela exista se ela não existir não ocorrerá erro, o valor null sera adicionado no ligar. veja no exemplo a seguir:
+
+$nome1 = 'João';
+$nomeCompeto1 = $nome1;
+//$nomeCompeto1 .= isset($sobreNome1) ? $sobreNome1 : null; Neste caso o operador NULL CAO não está sendo usado
+$nomeCompleto1 .= ($sobreNome1) ?? null; // Com o operador NULL CAO foi possível simplificar o código da linha a cima.
+echo $nomeCompeto1;
+
+No exemplo acima o valor impresso será (João), pois a variável $sobreNome1 não existe.
+
+				</code>
+        	</pre>
+        </div>  
 			
-		</div>>
+		</div>
 			</body>
 	</html>
 
@@ -91,4 +140,18 @@ Para mostrar todos os dados do array usa-se o comando print_u(nomedoarray), veja
 	echo $ingredientes[0]."<br/>";
 	//echo $ingredientes2[2];
 	//print_r($ingredientes);
+	$idade = 17;
+		if($idade >= 18){
+			echo "Maoir de idade";
+	}else{
+		echo "Menor de idade";
+	}
+
+	$nome1 = 'João';
+	$nomeCompeto1 = $nome1;
+	$nomeCompeto1 .= isset($sobrenome1) ? $sobrenome1 : null ;
+	echo $nomeCompeto1;
+
+
+	//echo ($idade >= 18) ? "Maior de idade" : "Menor de idade";
 ?>

@@ -9,4 +9,7 @@ Módulo 2
 	Aula 1 Condicional if
 	Aula 2 Operador ternário
 	Aula 3 Condicional NULL CAO
+	Aula 4 Condicional switch
+	Aula 5 Loop while
+	Aula 6 Loop for
 	

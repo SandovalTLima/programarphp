@@ -67,10 +67,11 @@ Para mostrar todos os dados do array usa-se o comando print_u(nomedoarray), veja
             	</code>
             </pre>
         <div id="condicionais">
-        	<h3>Condicional if</h3>
-
+        	<h3>Condicionais</h3>
         	<pre>
         		<code>
+<h3>Condicional if</h3>
+
 Ao usar o condicional if(se) o bloco de código dentro dele só é executado se a condição for satisfeita, como veremos no exemplo a seguir:
 	
 $idade = 18;
@@ -110,11 +111,66 @@ echo $nomeCompeto1;
 
 No exemplo acima o valor impresso será (João), pois a variável $sobreNome1 não existe.
 
+<h3>Condicional switch</h3>
+
+O switch é uma condicional usado pra substituir um conjuntos de ifs e else.
+No switch ele usa uma variável caso uma das opções case seja verdadeira ele entra na opção. O break serve para parar no case verdadeiro, caso não não use o break os próximos cases serão executados. 
+O default ssubstitue o else, ele é executado quando nenhum case é verdadeiro. Veja o exemplo abaixo:
+
+$numero = 0;
+switch ($numero) {
+	case 1:
+		echo "Número 1";
+		break;
+	case 2:
+		echo "Número 2";
+		break;
+	default:
+		echo "Valor inválido";
+		break;
+}
+
+No exemplo acima o bloco de código executado é o default, pois nenhum dos cases é verdaeiro.
+
+
+
 				</code>
         	</pre>
         </div>  
 			
 		</div>
+		<div id="loops">
+	<h3>Loops</h3>
+	Loops são blocos de código que podem ser executados indefinidas vezes, até que a condição de parada seja falsa.
+			<pre>
+				<code>
+<h3>Loop while</h3>
+O loop (estrutura de repetição) while é executado até que a condição se torne verdadeira.
+
+$parada = 0;
+while ($parada < 10) {
+	echo $parada;
+	$parada = $parada + 1;
+}
+
+No exemplo acima a condição de parada é a variável $parada ser maior que 10, neste caso ao valor da variável $parada é executada 11 vezes, pois a cada interação a variável $parada é acrescida mais 1 ao seu valor.
+
+<h3>Loop for</h3>
+O for tem e seguinte estrutrura for (definir variável; condição de parada; interação) {código a ser executado}; veja o exemplo abaixo:
+	
+for ($numero = 0; $numero < 10; $numero++) { 
+	echo "Número ".$numero;
+} 
+
+No exemplo acima a variável $numero é iniciada com valor 0, a condição de para é a variável ser maior que 9, a cada interação o valor da variável é acrescida de 1. O comando echo "Número ".$numero; é executado dez vezes.
+
+
+				</code>
+			</pre> 
+			
+		</div>
+
+
 			</body>
 	</html>
 
@@ -154,4 +210,27 @@ No exemplo acima o valor impresso será (João), pois a variável $sobreNome1 n�
 
 
 	//echo ($idade >= 18) ? "Maior de idade" : "Menor de idade";
+	$numero = 0;
+	switch ($numero) {
+		case 1:
+			echo "Número 1";
+			break;
+		case 2:
+			echo "Número 2";
+			break;
+		
+		default:
+			echo "Valor inválido";
+			break;
+	}
+	/*
+	$parada = 0;
+	while ($parada < 10) {
+		echo $parada.</br>;
+		$parada = $parada + 1;
+	} */
+
+	for ($numero = 0; $numero < 10; $numero++) { 
+		echo "Número ".$numero;
+	}
 ?>

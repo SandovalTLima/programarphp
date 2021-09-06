@@ -130,9 +130,7 @@ switch ($numero) {
 		break;
 }
 
-No exemplo acima o bloco de código executado é o default, pois nenhum dos cases é verdaeiro.
-
-
+No exemplo acima o bloco de código executado é o default, pois nenhum dos cases é verdeiro.
 
 				</code>
         	</pre>
@@ -164,6 +162,51 @@ for ($numero = 0; $numero < 10; $numero++) {
 
 No exemplo acima a variável $numero é iniciada com valor 0, a condição de para é a variável ser maior que 9, a cada interação o valor da variável é acrescida de 1. O comando echo "Número ".$numero; é executado dez vezes.
 
+<h3>Loop Foreach</h3>
+
+O loop foreach tem o proposito único de trabalhar com arrays
+O foreach ele é executado uma vez para cada elemento do array, ele pode acessar cada valor do array, acessando do primeiro até o último. Veja no exemplo abaixo:
+
+$ingredientes = [
+	'Açucar', 
+	'farinha de trigo',
+	'Ovo',
+	'Leite',
+	'fermento'
+	];
+foreach ($ingredientes as $ingrediente) {
+	echo "Item: ".$ingrediente."</br>";
+}
+
+No exemplo acima o array $ingredientes é criado e seus elementos adicionas, logo abaixo usamos o for each para varrer o array e imprimir cada um dos elementos do array. Note que a cada interação a variável $ingrediente assume um elemento do array.
+É possível também acessar a chave(índice) de cada elemento do array usando a seguinte estrutura:
+
+$ingredientes = [
+	'Açucar', 
+	'farinha de trigo',
+	'Ovo',
+	'Leite',
+	'fermento'
+	];
+foreach ($ingredientes as $chave => $valor) {
+	echo "Ingrediente".$chave." : ".$valor."</br>";
+};
+
+Note no exemplo acima que usamos a variável $chave(índice) para pegar a chave e a variável $valor para pegra os dados do array.
+É possível imprimir o vetor na forma de lista usando as tags <ul> e <li>, veja no exemplo abaixo:
+
+$ingredientes = [
+	'Açucar', 
+	'farinha de trigo',
+	'Ovo',
+	'Leite',
+	'fermento'
+	];
+echo '<ul>';
+foreach ($ingredientes as $chave => $valor) {
+	echo '<li>'.$valor.'</li>';
+};
+echo '</ul>';
 
 				</code>
 			</pre> 
@@ -175,6 +218,7 @@ No exemplo acima a variável $numero é iniciada com valor 0, a condição de pa
 	</html>
 
 <?php
+/*
 	$x = 10;
 	$y = 5;
 	//echo $x + 10;
@@ -228,9 +272,48 @@ No exemplo acima a variável $numero é iniciada com valor 0, a condição de pa
 	while ($parada < 10) {
 		echo $parada.</br>;
 		$parada = $parada + 1;
-	} */
+	} 
 
 	for ($numero = 0; $numero < 10; $numero++) { 
-		echo "Número ".$numero;
+		echo "Número ".$numero; 
+	$ingredientes = [
+		'Açucar', 
+		'farinha de trigo',
+		'Ovo',
+		'Leite',
+		'fermento'
+	];
+	foreach ($ingredientes as $ingrediente) {
+		echo "Item: ".$ingrediente."</br>";
 	}
+	
+$ingredientes = [
+	'Açucar', 
+	'farinha de trigo',
+	'Ovo',
+	'Leite',
+	'fermento'
+	];
+echo '<ul>';
+foreach ($ingredientes as $chave => $valor) {
+	echo '<li>'.$valor.'</li>';
+};
+echo '</ul>';
+$caractere = "-";
+for ($i = 0; $i < 10; $i++) { 
+	for ($j=0; $j < 10; $j++) {
+		echo $caractere;
+		
+			}
+			echo "".'</br>';		
+}*/	
+
+$caractere = "-";
+for ($i = 0; $i < 20; $i++) { 
+	for ($j=0; $j < $i; $j++) {
+		echo $caractere;
+		
+			}
+			echo "".'</br>';		
+}	
 ?>

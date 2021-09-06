@@ -1,3 +1,4 @@
+Curso PHP
 Módulo 1
     Aula 6 Primeiros comandos php
     Aula 7 Tipos de variáveis
@@ -12,4 +13,7 @@ Módulo 2
 	Aula 4 Condicional switch
 	Aula 5 Loop while
 	Aula 6 Loop for
+	Aula 7 Loop Foreach
+	Aula 8 Exercícios
+	Aula 9 Exercícios
 	

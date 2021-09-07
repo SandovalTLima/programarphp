@@ -232,7 +232,7 @@ Observação, a função só é executada quando, se for chamada.
 
 <h3>Parâmetros de funções</h3>
 Parâmetros são importantes para passar valores para a função usa-los.
-O parâmetros são variávei que são definidas entre os parenteses da função, sendo separados por vírgula.
+O parâmetros são variáveis que são definidas entre os parenteses da função, sendo separados por vírgula.
 Veja no exemplo abaixo:
 
 function somar($n1, $n2){ // os parâmetros $n1 e $n2 são definidos
@@ -244,6 +244,7 @@ function somar($n1, $n2){ // os parâmetros $n1 e $n2 são definidos
 $soma = somar(5, 6); // O valor retornado é armazenado na variável $soma, depois que a função somar é chamada e sendo passados os valores 5, correspondente a variável $n1 e 6, correspondente a variável $n2.  
 echo "Total: ".$soma; //O valor da variável soma é impresso.
 
+<h3>Parâmetros type e valor padrão</h3>
 					</code>
 				</pre>
 				

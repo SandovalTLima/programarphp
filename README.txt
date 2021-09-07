@@ -20,4 +20,5 @@ Módulo 3 Funções, parâmetros e includes
 	Aula 1 Introdução à funções 
 	Aula 2 Definindo uma função
 	Aula 3 Parâmetros definição normal
+	Aula 4 Parâmetros type e valor padrão
 	

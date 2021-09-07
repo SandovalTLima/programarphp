@@ -210,6 +210,44 @@ echo '</ul>';
 
 				</code>
 			</pre> 
+			<div id="funcoes">
+				<h3>Funções</h3>
+				<pre>
+					<code>
+Funções são blocos de código reponsáveis por funções específicas, retonando um resultado esperado.
+As funções já podem vir prontas ou podem ser criadas. As funções tem como grande benefício a reutilização de código, a medida que uma vez criada pode ser chamada em outros lugares do código.
+Para criar uma função deve-se usar a palavra reservada function em seguida o nome da função, depois parenteses e por fim chaves. Veja no exemplo a seguir:
+
+function subsequente(){
+	for ($i=0; $i < 10; $i++) { 
+		echo $i.'<br/>'; //Esta função imprime os valores de $i
+
+	}
+//	echo '<hr/>';//Linha horizontal
+}; //Criação da função
+subsequente(); //Afunção é chamada para ser executada
+
+Note que a função é criada os dados são processados e ela tem como retorno a impressão dos valores de $i.
+Observação, a função só é executada quando, se for chamada. 
+
+<h3>Parâmetros de funções</h3>
+Parâmetros são importantes para passar valores para a função usa-los.
+O parâmetros são variávei que são definidas entre os parenteses da função, sendo separados por vírgula.
+Veja no exemplo abaixo:
+
+function somar($n1, $n2){ // os parâmetros $n1 e $n2 são definidos
+	$total = $n1 + $n2; // O valor da soma de $n1 e $n2 é armazenado na variável $total
+	return $total; O valor da variável total é retornado 
+
+};
+
+$soma = somar(5, 6); // O valor retornado é armazenado na variável $soma, depois que a função somar é chamada e sendo passados os valores 5, correspondente a variável $n1 e 6, correspondente a variável $n2.  
+echo "Total: ".$soma; //O valor da variável soma é impresso.
+
+					</code>
+				</pre>
+				
+			</div>
 			
 		</div>
 
@@ -306,7 +344,7 @@ for ($i = 0; $i < 10; $i++) {
 		
 			}
 			echo "".'</br>';		
-}*/	
+}
 
 $caractere = "-";
 for ($i = 0; $i < 20; $i++) { 
@@ -315,5 +353,24 @@ for ($i = 0; $i < 20; $i++) {
 		
 			}
 			echo "".'</br>';		
-}	
+}
+function subsequente(){
+	for ($i=0; $i < 10; $i++) { 
+		echo $i.'<br/>'; //Esta função imprime os valores de $i
+
+	}
+	echo '<hr/>';//Linha horizontal
+}; //Criação da função
+subsequente(); //Afunção é chamada para ser executada
+*/
+function somar($n1, $n2){ // os parâmetros $n1 e $n2 são definidos
+	$total = $n1 + $n2; // O valor da soma de $n1 e $n2 é armazenado na variável $total
+	return $total; //O valor da variável total é retornado 
+
+};
+
+$soma = somar(5, 6); // O valor retornado é armazenado na variável $soma, depois que a função somar é chamada e sendo passados os valores 5, correspondente a variável $n1 e 6, correspondente a variável $n2.  
+echo "Total: ".$soma; //O valor da variável soma é impresso.
+
+
 ?>

@@ -245,6 +245,19 @@ $soma = somar(5, 6); // O valor retornado é armazenado na variável $soma, depo
 echo "Total: ".$soma; //O valor da variável soma é impresso.
 
 <h3>Parâmetros type e valor padrão</h3>
+Podemos adicionar parâmetros opcionais. Isso é possível atribuindo um valor padrão ao parâmetro, caso o parâmetro não seja passado ao chamar a função o valor padrão é adicionado. Veja no exemplo abaixo:
+
+function somar($n1, $n2, $n3 = 0){ // os parâmetros $n1 e $n2 são definidos. O valor padrão de $n3 foi definido como 0
+	$total = $n1 + $n2; // O valor da soma de $n1 e $n2 é armazenado na variável $total
+	return $total; //O valor da variável total é retornado 
+
+};
+
+$soma = somar(5, 6); // O valor retornado é armazenado na variável $soma, depois que a função somar é chamada e sendo passados os valores 5, correspondente a variável $n1 e 6, correspondente a variável $n2. Neste caso como o terceiro parâmetro não foi adicionado, tereiro parâmetro assumiu o valor padrão  
+echo "Total: ".$soma; //O valor da variável soma é impresso.
+
+Tipos de parâmetros podem ser definidos, isso é possível adicionando o tipo de dado que se espera (int $n1, por exemplo).
+
 					</code>
 				</pre>
 				
@@ -364,13 +377,13 @@ function subsequente(){
 }; //Criação da função
 subsequente(); //Afunção é chamada para ser executada
 */
-function somar($n1, $n2){ // os parâmetros $n1 e $n2 são definidos
+function somar($n1, $n2, $n3 = 0){ // os parâmetros $n1 e $n2 são definidos. O valor padrão de $n3 foi definido como 0
 	$total = $n1 + $n2; // O valor da soma de $n1 e $n2 é armazenado na variável $total
 	return $total; //O valor da variável total é retornado 
 
 };
 
-$soma = somar(5, 6); // O valor retornado é armazenado na variável $soma, depois que a função somar é chamada e sendo passados os valores 5, correspondente a variável $n1 e 6, correspondente a variável $n2.  
+$soma = somar(5, 6); // O valor retornado é armazenado na variável $soma, depois que a função somar é chamada e sendo passados os valores 5, correspondente a variável $n1 e 6, correspondente a variável $n2. Neste caso como o terceiro parâmetro não foi adicionado, tereiro parâmetro assumiu o valor padrão  
 echo "Total: ".$soma; //O valor da variável soma é impresso.
 
 

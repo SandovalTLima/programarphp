@@ -257,6 +257,49 @@ $soma = somar(5, 6); // O valor retornado é armazenado na variável $soma, depo
 echo "Total: ".$soma; //O valor da variável soma é impresso.
 
 Tipos de parâmetros podem ser definidos, isso é possível adicionando o tipo de dado que se espera (int $n1, por exemplo).
+<h3>Parâmetros referência ou valor</h3>
+Passando parâmetros como referência e passando parâmetros como valor: Para passar parâmetros por valor, deve-se passar as variáveis como os parâmetros. Como no exemplo abaixo:  
+
+unction somar($n1, $n2){
+	$total = $n1 + $n2;
+	return $total;
+};
+
+$x = 5; //As variáveis $x e $y são criadas e seus valores atribuidos
+$y = 5;
+echo "Total: ".somar($x, $y); //As variáveis $x e $y são passadas como parâmetros
+
+Para passar uma variável como referência usa-se o simbolo &, como podemos ver abaixo:
+
+function somar($n1, $n2, &$total){
+	$total = $n1 + $n2;
+	return $total;
+};
+
+$x = 5; //As variáveis $x e $y são criadas e seus valores atribuidos
+$y = 5;
+$soma = 0;
+somar($x, $y, $soma);
+echo "Total: ".$soma; //As variáveis $x e $y são passadas como parâmetros
+
+Note que ao passar a variável $total como parâmetro não há necessidade de usar o return, pois o terceiro elemento é usado para receber o valor da variável $total, no caso a cima a variável $soma.
+<h3>Funções anônimas</h3>
+Funções anônimas são funções onde não se declara um nome. As funções anônimas podem ser usadas de duas formas: armazenando ela numa variável ou passando ela como parâmetro para outra função. 
+Usando uma função anônima com uma variável. Veja no exemplo abaixo:
+
+$dizimo = function(int $valor){
+	return $valor * 0.1;
+};
+
+echo $dizimo(100);
+
+Usando uma função como parâmetro para outra função. Veja no exemplo abaixo:
+
+function($n1, function(parametros){ código }){
+
+};
+
+
 
 					</code>
 				</pre>
@@ -376,7 +419,7 @@ function subsequente(){
 	echo '<hr/>';//Linha horizontal
 }; //Criação da função
 subsequente(); //Afunção é chamada para ser executada
-*/
+
 function somar($n1, $n2, $n3 = 0){ // os parâmetros $n1 e $n2 são definidos. O valor padrão de $n3 foi definido como 0
 	$total = $n1 + $n2; // O valor da soma de $n1 e $n2 é armazenado na variável $total
 	return $total; //O valor da variável total é retornado 
@@ -386,5 +429,39 @@ function somar($n1, $n2, $n3 = 0){ // os parâmetros $n1 e $n2 são definidos. O
 $soma = somar(5, 6); // O valor retornado é armazenado na variável $soma, depois que a função somar é chamada e sendo passados os valores 5, correspondente a variável $n1 e 6, correspondente a variável $n2. Neste caso como o terceiro parâmetro não foi adicionado, tereiro parâmetro assumiu o valor padrão  
 echo "Total: ".$soma; //O valor da variável soma é impresso.
 
+
+function somar($n1, $n2){
+	$total = $n1 + $n2;
+	return $total;
+};
+
+$x = 5; //As variáveis $x e $y são criadas e seus valores atribuidos
+$y = 5;
+echo "Total: ".somar($x, $y); //As variáveis $x e $y são passadas como parâmetros
+
+
+
+function somar($n1, $n2, &$total){
+	$total = $n1 + $n2;
+	return $total;
+};
+
+$x = 5; //As variáveis $x e $y são criadas e seus valores atribuidos
+$y = 5;
+$soma = 0;
+somar($x, $y, $soma);
+echo "Total: ".$soma; //As variáveis $x e $y são passadas como parâmetros
+
+
+$dizimo = function(int $valor){
+	return $valor * 0.1;
+};
+
+echo $dizimo(100);
+
+function($n1, function(parametros){ código }){
+
+};
+*/
 
 ?>

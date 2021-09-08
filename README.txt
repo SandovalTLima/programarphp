@@ -21,4 +21,7 @@ Módulo 3 Funções, parâmetros e includes
 	Aula 2 Definindo uma função
 	Aula 3 Parâmetros definição normal
 	Aula 4 Parâmetros type e valor padrão
+	Aula 5 Parâmetros referência ou valor
+	Aula 6 Funções Anônimas
+	Aula 7 Funções flecha (arrow)
 	

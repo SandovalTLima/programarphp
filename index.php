@@ -299,6 +299,15 @@ function($n1, function(parametros){ código }){
 
 };
 
+<h3>Funções flecha (arrow)</h3>
+Funções flecha são funções que só podem fazer uma comando. Esta função ao invés de usar a palavra reservada function, usa a palavea fn. sua estrutura esta representada no exemplo abaixo:
+
+$dizimo = fn($valor) => $valor * 0.1;
+echo $dizimo(200);
+
+Note que a única instrução executada pela função é $valor * 0.1
+
+
 
 
 					</code>
@@ -463,5 +472,8 @@ function($n1, function(parametros){ código }){
 
 };
 */
+
+$dizimo = fn($valor) => $valor * 0.1;
+echo $dizimo(200);
 
 ?>

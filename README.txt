@@ -22,6 +22,9 @@ Módulo 3 Funções, parâmetros e includes
 	Aula 3 Parâmetros definição normal
 	Aula 4 Parâmetros type e valor padrão
 	Aula 5 Parâmetros referência ou valor
-	Aula 6 Funções Anônimas
+	Aula 6 Funções anônimas
 	Aula 7 Funções flecha (arrow)
+	Aula 8 Funções recursivas
+	Aula 9 Funções nativas de matemática
+	Aula 10 Funções nativas de strings 1/2
 	

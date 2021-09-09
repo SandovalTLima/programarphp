@@ -9,7 +9,7 @@
 				<code>
 					<h2>Estrutura básica PHP</h2>
 					
-<img src="../imagens/php.png"/> 
+<img src="./imagens/php.png"/> 
 
 				</code>
 			</pre>
@@ -306,10 +306,38 @@ $dizimo = fn($valor) => $valor * 0.1;
 echo $dizimo(200);
 
 Note que a única instrução executada pela função é $valor * 0.1
+<h3>Funções recursivas</h3>
+Uma função recursiva é uma função que executa (chama) ela mesma. Ela é chamada dentro dela mesma até que a condição seja satisfeita. Veja no exemplo abaixo:
 
+function dividirRecursiva($numero){ //A função recebe como parâmetro um número 
+	$metade = $numero / 2; // O número é dividido
+	echo $metade."<br/>";
+	if (round($metade) > 0) { // O número é arredondado para não acontecer diversar divisões de frações de 0. 
+		dividirRecursiva($metade); //A função é chamada de maneira recursiva.
+	};
+};
+dividirRecursiva(100);
+<h3>Funções nativas de matemática</h3>
+São funções matémáticas pré existentes no php, havendo só a necessidade de chama-las. Veja alguns exemplos:
+Pegar o módulo de um número. veja no exemplo abaixo o uso da função abs().
 
+//Módulo de um número
+$numero = -10;
+echo abs($numero);
 
-
+Função pi: esta função retorna o valor de pi. Veja no exemplo: echo pi();
+Para arredondar um número para baixo usamos a função foor(). Veja o exemplo: echo floor(3.14); 
+Para arredondar um número para cima usamos a função ceil(). Veja o exemplo: echo ceil(3.14);
+Para arredondar um número para cima ou para baixo dependendo do seu valor usamos a função round(). Veja o exemplo: echo round(3.14); neste caso irá arredondar par 3, pois 3.14 é mais póximo de 3 que de 4.
+Para gerar um valor aleatório dentro de um intervalo usamos a função rand(). veja no exemplo: echo rand(5, 10); note que o intervalo é de 5 a 10.
+Para pegar o número maior em uma lista usamos a função max(). Veja o exemplo: echo max(1, 5, 8, 2); é possivel passar uma lista como parâmetro.
+Para pegar o número menor em uma lista usamos a função min(). Veja o exemplo: echo min(1, 5, 8, 2); é possivel passar uma lista como parâmetro.
+<h3>Funções nativas de strings</h3>
+São funções internas do php que trabalham com strings.
+Para tirar os espaços de uma string usamos a função trim(). veja no exemplo seguinte: echo trim('  trim '); será impreso somente o texto trim.
+Para contar o número de caracteres de uma string usamos a função strlen(). Veja o próximo exemplo: echo strlen('teste'); neste caso a função retornará o calor 5.
+Para deixar todos os caracteres de uma string minúculos usamos a função strtolow(). veja no exemplo a seguir: echo strtolower('testE'); neste caso será retornada a string teste.
+Para retornar em maiusculo todos os caracteres de uma string usamos a função strtoupper(). Vaja o exemplo seguinte: echo strtoupper('Teste'); nesse exemplo sera retornada a string TESTE.
 					</code>
 				</pre>
 				
@@ -471,9 +499,55 @@ echo $dizimo(100);
 function($n1, function(parametros){ código }){
 
 };
-*/
+
 
 $dizimo = fn($valor) => $valor * 0.1;
 echo $dizimo(200);
 
+
+function dividirRecursiva($numero){ //A função recebe como parâmetro um número 
+	$metade = $numero / 2; // O número é dividido
+	echo $metade."<br/>";
+	if (round($metade) > 0) { // O número é arredondado para não acontecer diversar divisões de frações de 0. veja no exemplo abaixo:
+		dividirRecursiva($metade); //A função é chamada de maneira recursiva.
+	};
+};
+dividirRecursiva(100);
+
+//Módulo de um número
+$numero = -10;
+echo abs($numero);
+
+
+//pi
+echo pi();
+
+//foor arredondar para baixo
+echo floor(3.14);
+
+//ceil erredonda para cima
+echo ceil(3.14);
+
+//round arredonda para cima ou para baixo
+echo round(3.14);
+
+//rand sorteia um número em determinado intervalo
+echo rand(5, 10);
+
+//max retorna o maior número
+echo max(1, 5, 8, 2);
+//min retorna o menor número
+echo min(1, 5, 8, 2);
+
+//trim elimina os espaços de uma string
+echo trim(' assim   ');
+
+//strlen retorna a quantidade de carcteres de uma string
+echo strlen('teste');
+
+//strtolower retorna todos os caracteres de uma string minuscula
+echo strtolower('testE');
+*/
+//strtoupper retorna maisculo todos os caracteres de uma string
+echo strtoupper('Teste');
 ?>

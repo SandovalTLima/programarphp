@@ -27,4 +27,6 @@ Módulo 3 Funções, parâmetros e includes
 	Aula 8 Funções recursivas
 	Aula 9 Funções nativas de matemática
 	Aula 10 Funções nativas de strings 1/2
+	Aula 11 Funções nativas de strings 2/2
+	Aula 12 Funções nativas de array 1/2
 	

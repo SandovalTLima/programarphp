@@ -338,6 +338,48 @@ Para tirar os espaços de uma string usamos a função trim(). veja no exemplo s
 Para contar o número de caracteres de uma string usamos a função strlen(). Veja o próximo exemplo: echo strlen('teste'); neste caso a função retornará o calor 5.
 Para deixar todos os caracteres de uma string minúculos usamos a função strtolow(). veja no exemplo a seguir: echo strtolower('testE'); neste caso será retornada a string teste.
 Para retornar em maiusculo todos os caracteres de uma string usamos a função strtoupper(). Vaja o exemplo seguinte: echo strtoupper('Teste'); nesse exemplo sera retornada a string TESTE.
+Para trocar uma palavra ou um caractere por outro usamos a função str_replace(); Veja no exemplo a baixo:
+
+$nome = 'José Santos';
+$nomeCorreto = str_replace('Santos', 'Silva', $nome); //A função procura a string Santos e substitui por Silva na variável $nome
+echo $nomeCorreto; //A função echo imprime a string modificada, a saída é José Silva
+
+Observação: onde for encontrada uma string igual é substituida pela nova.
+Para pegar uma parte de uma string usamos a função substr(); o primeiro parâmetro passamos a string que queremos pegar os caracteres, no segundo informamos onde começa e o terceiro onde termima. Veja no exemplo: echo substr('eu sou uma string', 6, 14); //Note que a função ignora os spaços vazios. O funlção echo imprime a string: uma string
+Para pegar a posição de um caractere ou um conjunto de caracteres em uma string usamos a função strpos(); veja no exemplo a seguir: echo strpos('uma string', 's'); //Nesse caso a função retorna o valor 4
+Para transformar uma string em um array usamos a função explode(); passamos como primeiro parâmetros o que vamos procurar normalmente  ' ' espaços vazios para servir de divisor, o segundo parâmetro é a string. Veja no exemplo print_r(explode(' ', 'Açucar Ovos Leite Fermento'));
+Para organizar (formatar) um número usamos a função number_format(); nesta função o primeiro parâmetro é o úmero a ser organizado, o segundo a quantidade de casas caso seja uma fração o terceiro o simbolo para separa a casa decimal o quarto para separar os milhares. Veja  no exemplo a seguir: echo number_format(1235290.12, 0, ',', '.');// 1.235.290 este é o retorno da função
+<h3>Funções nativas de arrays</h3>
+As funções nativas de arrays são função já implementadas no própio php.
+Para saber quantos itens tem no array usamos a função count(); veja no exemplo a seguir: echo count($lista = ['Nome1', 'Nome2', 'Nome3', 'Nome4']); //A função retorna o valor 4
+Para gerar um array a partir de outros dois arrays com os itens que não estão em ambos arrays, usamos a função array_diff(); no primeiro parâmetro passamos a primeira lista e no segundo a segunda lista. Veja no exemplo abaixo:
+
+$lista1 = ['João', 'Maria', 'Pedro'];
+$lista2 = ['Maria', 'Pedro'];
+$lisra3 = array_diff($lista1, $lista2); //nessa nova lista só vai ter João
+print_r($lisra3);
+
+A função array_filter(); possibilita diversas operações com arrays, nessa função o primeiro parâmetro é o array e o segundo parâmetro uma função. esta função pode fazer diversas operações com os elementos do array. Veja o exemplo abaixo:
+
+$lista = [1, 3, 9, 7, 2];
+$lista2 = array_filter($lista, function($valor){ //neste caso a função preenche a $lista3 com os returns
+	if ($valor > 5) {
+		return $valor;
+	}else{
+		return 0;
+	}
+});
+
+print_r($lista2);
+
+Para rodar uma função em um array podemos usar a função array_map(); essa função pode ser usada para entre outras coisas dobrar o valor de cada elementos do array. Veja o exemploa abaixo:
+
+$lista = [1, 3, 9, 7, 2];
+$lista2 = array_map(function($item){ //nesse caso o novo vetor vai ter os elementos com o dobro do valor do primeiro vetor
+	return $item * 2;
+}, $lista);
+print_r($lista2);
+
 					</code>
 				</pre>
 				
@@ -547,7 +589,48 @@ echo strlen('teste');
 
 //strtolower retorna todos os caracteres de uma string minuscula
 echo strtolower('testE');
-*/
+
 //strtoupper retorna maisculo todos os caracteres de uma string
 echo strtoupper('Teste');
+
+$nome = 'José Santos';
+$nomeCorreto = str_replace('Santos', 'Silva', $nome); //A função procura a string Santos e substitui por Silva na variável $nome
+echo $nomeCorreto; //A função echo imprime a string modificada, a saída é José Silva
+
+echo substr('eu sou uma string', 6, 14); //Note que a função ignora os spaços vazios. O funlção echo imprime a string: uma string 
+
+//strpos() usada para pegar a posição de um caractere
+echo strpos('uma string', 's'); //Nesse caso a função retorna o valor 4
+
+//explode() é usada para fazer um vetor com uma string
+print_r(explode(' ', 'Açucar Ovos Leite Fermento'));
+
+echo number_format(1235290.12, 0, ',', '.');// 1.235.290 este é o retorno da função
+
+echo count($lista = ['Nome1', 'Nome2', 'Nome3', 'Nome4']); //A função retorna o valor 4
+
+$lista1 = ['João', 'Maria', 'Pedro'];
+$lista2 = ['Maria', 'Pedro'];
+$lisra3 = array_diff($lista1, $lista2); //nessa nova lista só vai ter João
+print_r($lisra3);
+
+//array_filter()
+$lista = [1, 3, 9, 7, 2];
+$lista2 = array_filter($lista, function($valor){ //neste caso a função preenche a $lista 3 com os returns
+	if ($valor > 5) {
+		return $valor;
+	}else{
+		return 0;
+	}
+});
+
+print_r($lista2);
+*/
+//array_map
+$lista = [1, 3, 9, 7, 2];
+$lista2 = array_map(function($item){ //nesse caso o novo vetor vai ter os elementos com o dobro do valor do primeiro vetor
+	return $item * 2;
+}, $lista);
+print_r($lista2);
+
 ?>

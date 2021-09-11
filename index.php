@@ -380,6 +380,37 @@ $lista2 = array_map(function($item){ //nesse caso o novo vetor vai ter os elemen
 }, $lista);
 print_r($lista2);
 
+Para remover o último elemento de um array usamos a função array_pop(); passamos o array como parâmetro. Veja o exemplo: array_pop($lista);
+Para remover o primeiro elemento de um array usamos a função array_shift(); passamos como parâmetro o array. Vaja o exemplo: array_shift($lista);
+Para checar se existe determinado elemento em um array usamos a função in_array(); passamos no primeiro parâmetro o elemento e no segundo o array. Veja o exemplo:
+
+$lista = [10, 5, 40, 25];
+if (in_array(5, $lista)) {
+	echo "O elemento existe"; // O if é executado pois o elemento 5 existe no array
+}else{
+	echo "O elemento não existe";
+};
+
+Para checar se um elemento existe em um array e pegar a posição do elemento usamos a função array_search(); passamos como primeiro parâmetro o elemento e no segundo o array. veja o exemplo a seguir: echo array_search(10, $lista = [1, 6, 7, 10]); //neste exemplo o elemento existe na posição 3 
+Para organizarmos os elementos de um array em ordem decrescente usamos a função rsort(); passamos como parâmetro o array. Veja o exemplo: 
+
+//rsort ordena a lista em ordem decrescente
+$lista = [1, 6, 7, 10];
+rsort($lista); //Ordena a lista
+print_r($lista);
+
+Para organizarmos os elementos de um array em ordem crescente usamos a função sort(); passamos como parâmetro o array. Veja o exemplo: 
+
+//sort ordena a lista em ordem crescente
+$lista = [1, 6, 7, 10];
+sort($lista); //Ordena a lista
+print_r($lista);
+
+Para transformar um array em uma string usamos a função implode(); nessa função passamos como primeiro parâmetro o que vai separar cada elemento do array, neste caso usamos um espaço ' ', no segundo usamos o vetor. Veja o exemplo: echo implode(" ", $lista = ['João', 'vai', 'a', 'escola']);
+
+<h3>Funções nativas data/hora</h3>
+São funções internas do php para o uso de data e hora.
+Para exibir a data usamos a função date(); no primeiro parâmetro usamos o formato da data (ex. 'd/m/y' é possível tambem pegar a hora: 'd/m/y H:i:s', nesse caso ele pega o fuso horário greenwich). Veja o exemplo: echo date('d/m/y H:i:s'); //a função retorna a data e a hora.
 					</code>
 				</pre>
 				
@@ -625,12 +656,75 @@ $lista2 = array_filter($lista, function($valor){ //neste caso a função preench
 });
 
 print_r($lista2);
-*/
+
 //array_map
 $lista = [1, 3, 9, 7, 2];
 $lista2 = array_map(function($item){ //nesse caso o novo vetor vai ter os elementos com o dobro do valor do primeiro vetor
 	return $item * 2;
 }, $lista);
 print_r($lista2);
+//in_array verifica se há o elemento no array
+$lista = [10, 5, 40, 25];
+if (in_array(5, $lista)) {
+	echo "O elemento existe";
+}else{
+	echo "O elemento não existe";
+};
+
+//array_search verifica se existe o elemnto no array e retorna o elemento
+echo array_search(10, $lista = [1, 6, 7, 10]); //neste exemplo o elemento existe na posição 3 
+
+//rsort ordena a lista em ordem decrecente
+$lista = [1, 6, 7, 10];
+rsort($lista); //Ordena a lista
+print_r($lista);
+
+//sort ordena a lista em ordem crescente
+$lista = [1, 6, 7, 10];
+sort($lista); //Ordena a lista
+print_r($lista);
+
+//Cria uma string a partit de um vetor
+echo implode(" ", $lista = ['João', 'vai', 'a', 'escola']);
+//time 
+echo time(); //exibe o tempo desde a criação do php até a atualidade. 
+
+echo date('d/m/y H:i:s'); //a função retorna a data e a hora
+*/
+//exercício módulo 2
+$dia = date('D');
+//echo $dia;
+echo date('d/m/y').' ';
+function diaDaSemana($n){
+	switch ($n) {
+		case 'Mon':
+			echo "Segunda-feira";
+			break;
+		case 'Tue':
+			echo "Terça-feira";
+			break;
+		case 'Wed':
+			echo "Quarta-feira";
+			break;
+		case 'Thu':
+			echo "Quinta-feira";
+			break;
+		case 'Fri':
+			echo "Sexta-feira";
+			break;
+		case 'Sat':
+			echo "Sábado";
+			break;
+		case 'Sun':
+			echo "Domingo";
+			break;
+		default:
+			echo "Há algo errado";
+			break;
+	};
+
+};
+
+diaDaSemana($dia);
 
 ?>

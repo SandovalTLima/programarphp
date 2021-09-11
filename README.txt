@@ -29,4 +29,7 @@ Módulo 3 Funções, parâmetros e includes
 	Aula 10 Funções nativas de strings 1/2
 	Aula 11 Funções nativas de strings 2/2
 	Aula 12 Funções nativas de array 1/2
+	Aula 13 Funções nativas de array 2/2
+	Aula 14 Funções nativas data/hora
+	Aula 15 Exercício
 	

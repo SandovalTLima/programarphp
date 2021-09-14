@@ -3,7 +3,7 @@
 <a href="./paginas/config.php">Config</a>
 <a href="./paginas/header.php">Header</a>
 <a href="./paginas/sobre.php">Sobre</a>
- 
+<a href="./paginas/formulario.php">Formulário</a>
 
 <!DOCTYPE html meta chaset="UTF-8">
 <html>
@@ -456,6 +456,46 @@ echo $nome;
 					</code>
 				</pre>
 
+			</div>
+			<div>
+				<h3>Formulários</h3>
+				<pre>
+					<code>
+Formulários são importantes para receber dados do usuário. Quando precisamos de sigilo dos dados usamos o método POST, caso contrário podemos usar também o método GET. Veja um exemplo de formulário:
+
+
+<img src="./imagens/formulario.png"/>
+
+<h3>Recebendo dados do formulário</h3>
+Para receber os dados do formulário devemos verificar se algum dado foi enviado. Para receber os dados usamos variáveis recebendo os valor, pegamos os valores com o método filter_input(); este método recebe dois parâmetros ou mais, o primeiro é o método usado para enviar (GET ou POST), o segundo a variável do arquivo enviado. Veja o exemplo: $nome = filter_input(INPUT_POST, 'nome');
+
+Para verificar se os dados foram enviados antes de imprimir, podemos usar o bloco condicional if...else. Veja o exemplo:
+
+$nome = filter_input(INPUT_POST, 'nome');
+$idade = filter_input(INPUT_POST, 'idade');
+if ($nome && $idade) {
+	echo " Nome: ".$nome;
+	echo " Idade: ".$idade;
+} else {
+	echo "Os dados não foram enviados";
+}
+
+Neste caso, se algum dos campos não for enviado os dados não serão impressos. Podemos também retornar ao formulário quando os dados não foram enviados. Veja o exemplo: 
+
+$nome = filter_input(INPUT_POST, 'nome');
+$idade = filter_input(INPUT_POST, 'idade');
+if ($nome && $idade) {
+	echo " Nome: ".$nome;
+	echo " Idade: ".$idade;
+} else {
+	header("location: formulario.php");
+	exit;
+}
+
+Observação o header só pode ser usado se nenhum dado tenha sido processado, por exemplo ele imprime o nome no exempo acima.
+
+					</code>
+				</pre>
 			</div>
 			
 		</div>

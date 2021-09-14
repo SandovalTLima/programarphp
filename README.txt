@@ -32,4 +32,6 @@ Módulo 3 Funções, parâmetros e includes
 	Aula 13 Funções nativas de array 2/2
 	Aula 14 Funções nativas data/hora
 	Aula 15 Exercício
+	Aula 16 Trabalhando com múltiplos arquivos
+	Aula 17 Trabalhando com pastas diferentes
 	

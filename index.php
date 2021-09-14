@@ -1,3 +1,10 @@
+
+<a href="./paginas/home.php">Home</a>
+<a href="./paginas/config.php">Config</a>
+<a href="./paginas/header.php">Header</a>
+<a href="./paginas/sobre.php">Sobre</a>
+ 
+
 <!DOCTYPE html meta chaset="UTF-8">
 <html>
 	<head>
@@ -415,6 +422,41 @@ Para exibir a data usamos a função date(); no primeiro parâmetro usamos o for
 				</pre>
 				
 			</div>
+			<div id="multiplosArquivos">
+				<h3>Trabalhando com múltiplos arquivos</h3>
+				<pre>
+					<code>
+No php é posivel trabalhar com diversos arquivos, estes arquivos podem ser inclídos ao usarmos a palavra reservada include ou require. Ao importamos arquivos podemos usar as variáveis e funções. Veja o exemplo a seguir:
+
+//chamando o arquivo header.php
+require('header.php');
+//chamando o arquivo config.php
+require('config.php');
+//imprimindo uma variável de outro arquivo (config.php)
+echo $nome;
+
+Para evitar que um arquivo seja executado mais de uma vez é recomendável usar o require_once(); o  require_once verifica de já foi importado o mesmo arquivo, caso já tenha cido importado ele não executa novamente.
+					</code>
+
+				</pre>
+
+			</div>
+			<div id="pastas">
+				<h3>Trabalhando com pastas diferentes</h3>
+				<pre>
+					<code>
+Em um projeto devemos usar pastas pastas para organizar-lo. Para acessar um arquivo em outra pasta usamos o seguinte caminho: ./nomeDaPasta/nomeDoArquivo.extensão. Veja o exemplo abaixo:
+
+//chamando o arquivo header.php
+require('./template/header.php');
+//chamando o arquivo config.php
+require_once('./template/config.php');
+//imprimindo uma variável de outro arquivo (config.php)
+echo $nome;
+					</code>
+				</pre>
+
+			</div>
 			
 		</div>
 
@@ -690,8 +732,8 @@ echo implode(" ", $lista = ['João', 'vai', 'a', 'escola']);
 echo time(); //exibe o tempo desde a criação do php até a atualidade. 
 
 echo date('d/m/y H:i:s'); //a função retorna a data e a hora
-*/
-//exercício módulo 2
+
+//exercício módulo 3
 $dia = date('D');
 //echo $dia;
 echo date('d/m/y').' ';
@@ -727,4 +769,11 @@ function diaDaSemana($n){
 
 diaDaSemana($dia);
 
+//chamando o arquivo header.php
+require('./paginas/header.php');
+//chamando o arquivo config.php
+require_once('./paginas/config.php');
+//imprimindo uma variável de outro arquivo (config.php)
+echo $nome;
+*/
 ?>

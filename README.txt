@@ -37,3 +37,6 @@ Módulo 3 Funções, parâmetros e includes
 Módulo 4 Formulário, validações, sessão e arquivos
 	Aula 1 Introdução à HTTP requests 
 	Aula 2 Pegando informações do formulário
+	Aula 3 Validando informações do formulário
+	Aula 4 Sessão no PHP
+	Aula 5 Cookies no PHP

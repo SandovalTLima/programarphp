@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,5 +13,7 @@
 </html>
 <?php
 
-echo 'Conteúdo do site';
-
+if ( isset($_COOKIE['nome'])){ //se o cookie existir
+	$nome = $_COOKIE['nome'];
+	echo '<h2>'.$nome.'</h2>'; //o cookie é impresso.
+};

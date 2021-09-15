@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if($_SESSION['aviso']){
+	echo $_SESSION['aviso']; //caso haja um aviso da página recebedor, é impresso nesta página
+	$_SESSION ['aviso'] = " "; //aviso limpo
+}
+?>
+<a href="apagar.php">Apagar Cookie</a>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +33,13 @@
 	</label>
 	<br/>
 	<br/>
+	<label>
+		Email*:
+		<br/>
+		<input type="POST" name="email">
+		<br/>
+		<br/>
+	</label>
 	<input type="submit" name="enviar"/>
 
 </form>
@@ -31,6 +47,3 @@
 </body>
 </html>
 
-<?php
-
-?>

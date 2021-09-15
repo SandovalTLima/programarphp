@@ -494,6 +494,62 @@ if ($nome && $idade) {
 
 Observação o header só pode ser usado se nenhum dado tenha sido processado, por exemplo ele imprime o nome no exempo acima.
 
+<h3>Validado informações do formulário</h3>
+Para verificar se o usuário mandou as informações, se mandou, verificar se são compatíveis com as informações esperadas. 
+Para validar um email por exemplo, usamos o FILTER_VALIDATE_EMAIL. Veja o exemplo:
+
+<img src="./imagens/validate.png">
+
+Para validar um campo numérico inteiro usamos o FILTER_SANITIZE_NUMBER_INT (todos os caracteres não numéricos são eliminados), podemos usar o FILTER_VALIDATE_INT para caso o usuário mande algo diferente de um número inteiro. Veja no exemplo acima.
+Para validar os dados de uma variável podemos usar a função filter_var, passando como parâmetros a variável e o filtro desejado.
+Para evitar que o usuário mande códigos maliciosos nos campos do formulário usamos o filtro FILTER_SANITIZE_SPECIAL_CHARS, este filtro não permite que os códigos sejam executados.
+Veja alguns filtros:
+FILTER_VALIDATE_EMAIL
+FILTER_VALIDATE_INT
+FILTER_VALIDATE_IP
+FILTER_VALIDATE_URL
+FILTER_VALIDATE_FLOAT
+
+FILTER_SANITIZE_EMAIL
+FILTER_SANITIZE_STRING
+FILTER_SANITIZE_SPECIAL_CHARS
+FILTER_SANITIZE_URL
+FILTER_SANITIZE_NUMBER_INT
+FILTER_SANITIZE_NUMBER_FLOAT
+<h3>Sessão no PHP</h3>
+Para usar uma seção, a página que vai usar deve ter no início a função session_start(); esta função possibilita o envio de uma mensagem pra página que enviou os dados. neste caso a página formulário envia os dados para a página recebedor. Em recebedor é impressa a mensagem ao usuário. Veja o exemplo:
+Página recebedor
+
+<img src="./imagens/sessaoRecebedor.png">
+
+Página formulário
+
+<img src="./imagens/sessaoFormulario.png">
+
+Após mostrar o aviso devemos limpa-lo, uma das formas é atribuindo a variável aviso o caractere " ". Veja o exemplo:
+
+<img src="./imagens/avisoLimpo.png">
+
+<h3>Cookies no PHP</h3>
+São arquivos criados por sites que ao visita-los são salvos pelo vavegador. Este arquivos guardam as informações que identificam o visitante. 
+Só é possível setar um cookie antes da exibição de qualquer dado. 
+Para setar um cookie podemos usar a função setcookie(); essa função tem como parâmetros o nome do cookie, o valor que vai ser armazenado, o tempo de vida do cookie (o tempo para expirar o cookie) respectivamente. Ontre outros. Veja o exemplo:
+Setando cookie página recebedor
+
+<img src="./imagens/setarCookie.png">
+
+Imprimindo cookie na página header
+
+<img src="./imagens/imprimirCookie.png">
+
+Para deletar um cookie devemos setar com o tempo de expirar no passado. Veja o exemplo:
+
+<img src="./imagens/apagarCookie.png">
+
+
+
+
+
 					</code>
 				</pre>
 			</div>

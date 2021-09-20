@@ -40,3 +40,6 @@ Módulo 4 Formulário, validações, sessão e arquivos
 	Aula 3 Validando informações do formulário
 	Aula 4 Sessão no PHP
 	Aula 5 Cookies no PHP
+	Aula 6 Exercício prático (formulário)
+	Aula 7 Lendo arquivos
+	Aula 8 Escrevendo em arquivos

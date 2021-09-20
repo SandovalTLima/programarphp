@@ -4,6 +4,9 @@
 <a href="./paginas/header.php">Header</a>
 <a href="./paginas/sobre.php">Sobre</a>
 <a href="./paginas/formulario.php">Formulário</a>
+<a href="./paginas/formulario2.php">Formulário2</a>
+<a href="./paginas/lerArquivos.php">Ler Arquivos</a>
+<a href="./paginas/escreverArquivos.php">Escrever Arquivos</a>
 
 <!DOCTYPE html meta chaset="UTF-8">
 <html>
@@ -457,6 +460,7 @@ echo $nome;
 				</pre>
 
 			</div>
+		
 			<div>
 				<h3>Formulários</h3>
 				<pre>
@@ -545,10 +549,23 @@ Imprimindo cookie na página header
 Para deletar um cookie devemos setar com o tempo de expirar no passado. Veja o exemplo:
 
 <img src="./imagens/apagarCookie.png">
+					</code>
+				</pre>
+			</div>
 
+				<div>
+				<h3>Arquivos</h3>
+				<pre>
+					<code>
+<h3>Lendo Arquivos</h3>
+Para ler arquivos usamos a função file_get_contents(); passando commo parámetro o caminho do arquivo, o nome do arquivo.extensão. Veja o exemplo abaixo:
 
+<img src="./imagens/texto.png" align="center">
 
-
+Neste caso o arquivo é de extensão txt de nome texto, em seguida o texto do arquivo texto.txt é impresso pela função echo.
+<h3>Escrevendo em Arquivos</h3>
+Para escrever em um arquivos podemos usar entre outras a função file_put_contents(); esta função tem como primeiro parâmetro o nome do arquivo.extensão e o segundo o texto que se deseja escrever no arquivo. Se o arquivo já existir ele é substituido senão ele será criado. Alguns sistemas operacionais não permite a criação de arquivos, sendo necessário liberar no sistema essa permissão. Veja o exemplo a seguir: 
+<img src="./imagens/escreverArquivos.png">
 
 					</code>
 				</pre>

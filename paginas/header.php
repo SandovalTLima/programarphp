@@ -11,6 +11,7 @@
 
 </body>
 </html>
+
 <?php
 
 if ( isset($_COOKIE['nome'])){ //se o cookie existir

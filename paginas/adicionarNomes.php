@@ -1,13 +1,16 @@
-
 <?php 
 session_start();
-$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+$lista = ["João", "Maria", "Pedro"];
+$lita .= filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 if ($nome) {
 	echo $nome;
 }else{
 	echo "Digite seu nome";
 	header("location: formulario2.php");
 };
+
+
+
 
 
  ?>

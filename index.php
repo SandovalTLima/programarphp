@@ -7,7 +7,8 @@
 <a href="./paginas/formulario2.php">Formulário2</a>
 <a href="./paginas/lerArquivos.php">Ler Arquivos</a>
 <a href="./paginas/escreverArquivos.php">Escrever Arquivos</a>
-
+<a href="./paginas/formulario3.php">Formulário 3</a>
+<a href="./paginas/uploadArquivos.php">Upload Arquivos</a>
 <!DOCTYPE html meta chaset="UTF-8">
 <html>
 	<head>
@@ -566,6 +567,27 @@ Neste caso o arquivo é de extensão txt de nome texto, em seguida o texto do ar
 <h3>Escrevendo em Arquivos</h3>
 Para escrever em um arquivos podemos usar entre outras a função file_put_contents(); esta função tem como primeiro parâmetro o nome do arquivo.extensão e o segundo o texto que se deseja escrever no arquivo. Se o arquivo já existir ele é substituido senão ele será criado. Alguns sistemas operacionais não permite a criação de arquivos, sendo necessário liberar no sistema essa permissão. Veja o exemplo a seguir: 
 <img src="./imagens/escreverArquivos.png">
+<h3>Excuindo Arquivos</h3>
+Para excuir qualquer arquivo usamos a função unlink(caminho/nome.extensão); Veja o exemplo abaixo:
+<img src="./imagens/excluirArquivos.png"> 
+
+<h3>Movendo Arquivos/Renomear</h3>
+Para renomear arquivos usamos a função rename('nome.extensão', 'novoNome'); como primeiro parâmetro o caminho mais o nome do arquivo.extensão no segundo o novo nome. Veja no exemplo a seguir:
+
+<img src="./imagens/renomearArquivos.png"> 
+Para mover podemos usar a mesma função usada para renomear. Só passando como segundo parâmetro o caminho. Veja o exemplo a seguir: 
+
+<img src="./imagens/moverArquivos.png">
+ Para copiar arquivos usamos a função copy(); passando como primeiro parâmetro o caminho e o arquivo, como segundo o caminho onde queremos salvar e o nome. Veja o exemplo a segui:
+
+<img src="./imagens/copiarArquivos.png">
+
+<h3>Upload de Arquivos</h3>
+
+Para fazer uploads de arquivos devemos usar um formulário para receber o arquivo de determinada pasta. Veja no exemplo a seguir:
+
+<img src="./imagens/uploadArquivos.png">
+<img src="./imagens/receberArquivos.png">
 
 					</code>
 				</pre>
@@ -888,5 +910,13 @@ require('./paginas/header.php');
 require_once('./paginas/config.php');
 //imprimindo uma variável de outro arquivo (config.php)
 echo $nome;
+//excluir arquivos
+unlink('./arquivos/excluido.txt');
+echo "Arquivo excluido com sucesso";
+
+//modificar nome e/ou mover
+rename('./teste.txt', './arquivos/teste.txt'); //neste caso o arquivo terá como novo nome teste.txt e foi movido para a pasta arquivos
 */
+copy('./arquivos/teste.txt', './arquivos/teste2.txt');
+
 ?>

@@ -43,3 +43,8 @@ Módulo 4 Formulário, validações, sessão e arquivos
 	Aula 6 Exercício prático (formulário)
 	Aula 7 Lendo arquivos
 	Aula 8 Escrevendo em arquivos
+	Aula 9 Exercício prático (cadastro com txt)
+	Aula 10 Excluindo arquivos
+	Aula 11 Movendo arquivos
+	Aula 12 Upload de arquivos (1/2)
+	Aula 13 Upload de arquivos (2/2)

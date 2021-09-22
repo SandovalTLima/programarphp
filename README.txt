@@ -48,3 +48,9 @@ Módulo 4 Formulário, validações, sessão e arquivos
 	Aula 11 Movendo arquivos
 	Aula 12 Upload de arquivos (1/2)
 	Aula 13 Upload de arquivos (2/2)
+Módulo 5 Manipulação de array
+	Aula 1 Array range
+	Aula 2 Key_exists
+	Aula 3 Array_keys e array_values
+	Aula 4 Exercício: Montando uma tabela vertical
+	Aula 5 Montando uma tabela horizontal

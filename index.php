@@ -586,13 +586,48 @@ Para mover podemos usar a mesma função usada para renomear. Só passando como 
 
 Para fazer uploads de arquivos devemos usar um formulário para receber o arquivo de determinada pasta. Veja no exemplo a seguir:
 
-<img src="./imagens/uploadArquivos.png">
-<img src="./imagens/receberArquivos.png">
+<img src="./imagens/uploadArquivos.PNG">
+
+<img src="./imagens/receberArquivos.PNG">
 
 					</code>
 				</pre>
 			</div>
-			
+			<div>
+				<h3>Manipulação de Array</h3>
+				<pre>
+					<code>
+						<h3>Array Range</h3>
+Com a função range();podemos criar um array já com valores dentro dele. No primeiro parametro o valor inicial no segundo o valor final, o terceiro serve para usar o multiplicador. Veja o exemplo:
+
+<img src="./imagens/arrayrange.png">
+
+Essa função possibilita tambem trabalhar com strings, podemos colocar por exempo: range('a', 'i'); ele vai gerar as letras do alfabeto do a ao i em ordem alfabética.
+
+<h3>Key_exists</h3> 
+É uma função que nos permite verificar se uma determinada chave de um array existe. Veja o exemplo a seguir:
+
+<img src="./imagens/arrayExists.png">
+
+Uma função igual é a função array_key_exits(); essa função pode ser usada da mesma forma da função key_exists();
+
+<h3>Arrey_keys e array_values</h3>
+Essas duas funções tem o mesmo objetivo, porém, resultados diferentes. O array_keys cria um array de chaves enquanto o array_values cria um array de valores.
+A função array_keys(arrayOriginal); gera um segundo array com as chaves do array original. Neste novo array as chaves do array original viram os valores. Veja o exemplo:
+
+<img src="./imagens/array_keys.png">
+Saída
+<img src="./imagens/saidaArray_keys.png">
+
+A função array_values possibilita criar um novo array com os valores do array original. Veja o exemplo a seguir:
+
+<img src="./imagens/array_values.png">
+Saída
+<img src="./imagens/saidaArray_values.png">
+
+					</code>
+				</pre>
+			</div>
 		</div>
 
 
@@ -916,7 +951,92 @@ echo "Arquivo excluido com sucesso";
 
 //modificar nome e/ou mover
 rename('./teste.txt', './arquivos/teste.txt'); //neste caso o arquivo terá como novo nome teste.txt e foi movido para a pasta arquivos
-*/
+//copiar aquivos
 copy('./arquivos/teste.txt', './arquivos/teste2.txt');
 
+//range
+$array = range(0, 10, 3); //note que o valores vão começar em 0, vai até 10, pulando a cada 3.
+print_r($array);
+
+//key_exists
+$array = ['nome' => 'Sandoval',
+'idade' => '30',
+'cor' => 'Amarelo',
+'profissão' => 'Programador'
+];//array criado
+if (key_exists('nome', $array)) { //verificação se a chave nome existe
+	$nome = $array ['nome'];//se existir o valor é salvo em $nome e em seguida impresso
+	echo "Nome: ".$nome;
+}else{
+	echo "A chave procurada não existe";
+}
+
+//array_keys
+$array = ['nome' => 'Sandoval',
+'idade' => '30',
+'cor' => 'Amarelo',
+'profissão' => 'Programador'
+];
+
+$chaves = array_keys($array);
+print_r($chaves);
+
+//array_values
+
+$array = ['nome' => 'Sandoval',
+'idade' => '30',
+'cor' => 'Amarelo',
+'profissão' => 'Programador'
+];
+
+$valores = array_values($array);
+print_r($valores);
+*/
+
+
+
+
+$array = ['nome' => 'Sandoval',
+'idade' => '30',
+'cor' => 'Amarelo',
+'profissão' => 'Programador'
+];
+
+
+$chaves = array_keys($array);
+$valores = array_values($array);
+
 ?>
+<table border = "1">
+	<?php 
+		
+		echo '<tr>';
+		for ($i=0; $i < 4; $i++) {
+			echo '<th>'.$chaves[$i].'</th>';
+		}
+		echo '</tr>';
+		
+		
+		echo '<tr>';
+		for ($j=0; $j < 4; $j++) { 
+			echo '<td>'.$valores[$j].'</td>';
+		}
+		echo '</tr>';
+		
+
+	?>
+</table>
+<!--
+<table border = "1">
+	<?php 
+		for ($i=0; $i < 4; $i++) {
+		echo '<tr>';
+			echo '<td>'.$chaves[$i].'</td>';
+			echo '<td>'.$valores[$i].'</td>';
+		echo '</tr>';
+		}	 
+	?>
+</table>
+
+-->
+

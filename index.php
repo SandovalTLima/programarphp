@@ -625,6 +625,20 @@ A função array_values possibilita criar um novo array com os valores do array 
 Saída
 <img src="./imagens/saidaArray_values.png">
 
+<h3>Array_slice</h3>
+A função array_slice serve para copiar uma parte de um array, criando um novo array.
+No primeiro parâmentro passamos o array original, no segundo, onde começar a cópia (índice/chave), no terceiro onde parar a cópia (índice). Veja o exemplo a seguir:
+
+<img src="./imagens/array_slice.png">
+
+<h3>Array_splice</h3>
+A função array_splice serve para fazer modificações em determinado array, no primeiro parâmetro passamos o array original, no segundo onde devemos remover o elemnto, no terceiro até onde deve ser feita a remoção. veja o exemplo a seguir:
+
+<img src="./imagens/array_splice.png">
+
+Essa função també pode colocar elementos no array, passando no quarto parâmentro os itens que desejamos adicionar (se forem mais de umelemento passamos da sefuinte forma ['elemento','elemento', '...']). Veja o exemplo a seguir:
+
+<img src="./imagens/array_splice2.png">
 					</code>
 				</pre>
 			</div>
@@ -991,9 +1005,6 @@ $array = ['nome' => 'Sandoval',
 
 $valores = array_values($array);
 print_r($valores);
-*/
-
-
 
 
 $array = ['nome' => 'Sandoval',
@@ -1022,9 +1033,22 @@ $valores = array_values($array);
 			echo '<td>'.$valores[$j].'</td>';
 		}
 		echo '</tr>';
-		
 
-	?>
+//array_slice
+
+$array = ['a', 'b','c','d','e','f'];
+$retorno = array_slice($array, 0, 3);
+print_r ($retorno);
+*/
+//array_splice
+
+$array = ['a', 'b','c','d','e','f'];
+array_splice($array, 2, 4, 'S');
+print_r($array);
+
+?>
+
+
 </table>
 <!--
 <table border = "1">

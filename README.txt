@@ -54,3 +54,5 @@ Módulo 5 Manipulação de array
 	Aula 3 Array_keys e array_values
 	Aula 4 Exercício: Montando uma tabela vertical
 	Aula 5 Montando uma tabela horizontal
+	Aula 6 Array_slice
+	Aula 7 Array_splice
